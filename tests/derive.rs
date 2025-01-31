@@ -300,7 +300,7 @@ fn test_strategy_usize_add() {
     }
 
     fn add(left: &mut usize, right: usize) {
-        *left = *left + right;
+        *left += right;
     }
 
     test(S::new(0), S::new(0), S::new(0));
@@ -562,5 +562,11 @@ fn test_default_strategy() {
         Option<usize>,
         #[merge(strategy = merge::num::saturating_add)] u8,
         #[merge(strategy = Merge::merge)] N,
+    );
+
+    test(
+        S(Some(0), Some(1), 5, N(u8::MAX)),
+        S(Some(0), None, 2, N(u8::MAX)),
+        S(Some(2), Some(1), 3, N(1)),
     );
 }

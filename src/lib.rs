@@ -31,7 +31,7 @@
 //! - `num` (default): Enables the merge strategies in the `num` module that require the
 //!   `num_traits` crate.
 //! - `std` (default): Enables the merge strategies in the `hashmap` and `vec` modules that require
-//!    the standard library.  If this feature is not set, `merge` is a `no_std` library.
+//!   the standard library.  If this feature is not set, `merge` is a `no_std` library.
 //!
 //! # Example
 //!
@@ -86,7 +86,7 @@ pub use merge_derive::*;
 /// You can use these field attributes to configure the generated implementation:
 /// - `skip`: Skip this field in the `merge` method.
 /// - `strategy = f`: Call `f(self.field, other.field)` instead of calling the `merge` function for
-///    this field.
+///   this field.
 ///
 /// You can also set a default strategy for all fields by setting the `strategy` attribute for the
 /// struct.
@@ -273,7 +273,7 @@ pub mod hashmap {
     ///
     /// In other words, this gives precedence to `right`.
     pub fn overwrite<K: Eq + Hash, V>(left: &mut HashMap<K, V>, right: HashMap<K, V>) {
-        left.extend(right.into_iter())
+        left.extend(right)
     }
 
     /// On conflict, ignore elements from `right`.
