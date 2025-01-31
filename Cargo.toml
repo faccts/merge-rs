@@ -5,7 +5,7 @@
 name = "merge"
 version = "0.1.0"
 authors = ["Robin Krahl <robin.krahl@ireas.org>"]
-edition = "2018"
+edition = "2021"
 rust-version = "1.70"
 description = "Merge multiple values into one"
 homepage = "https://sr.ht/~ireas/merge-rs"
