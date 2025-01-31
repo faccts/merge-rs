@@ -12,6 +12,7 @@ SPDX-License-Identifier: CC0-1.0
   - `hashmap::overwrite`
   - `hashmap::ignore`
   - `hashmap::recurse`
+- Update MSRV to 1.70.0.
 
 # v0.1.0 (2020-09-01)
 

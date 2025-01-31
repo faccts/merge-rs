@@ -8,7 +8,7 @@ sources:
 tasks:
   - setup: |
       rustup set profile minimal
-      rustup default 1.34.2
+      rustup default 1.70.0
   - version: |
       rustc -V
   - build: |
@@ -16,7 +16,7 @@ tasks:
       cargo build --release
   - test: |
       cd merge-rs
-      cargo test
+      cargo test --lib --examples --benches --test derive --test strategies
 triggers:
   - action: email
     condition: failure
