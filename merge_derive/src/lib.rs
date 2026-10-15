@@ -11,7 +11,7 @@
 extern crate proc_macro;
 
 use proc_macro2::TokenStream;
-use proc_macro_error2::{abort, abort_call_site, dummy::set_dummy, proc_macro_error, ResultExt};
+use proc_macro_error3::{abort, abort_call_site, dummy::set_dummy, proc_macro_error, ResultExt};
 use quote::{quote, quote_spanned};
 use syn::Token;
 
