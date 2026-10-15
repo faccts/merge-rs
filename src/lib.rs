@@ -8,6 +8,7 @@
 //! ```
 //! trait Merge {
 //!     fn merge(&mut self, other: Self);
+//!     fn merged(self, other: Self) -> Self;
 //! }
 //! ```
 //!
@@ -159,6 +160,14 @@ pub use merge_derive::*;
 pub trait Merge {
     /// Merge another object into this object.
     fn merge(&mut self, other: Self);
+    /// Merge two objects and return the result.
+    fn merged(mut self, other: Self) -> Self
+    where
+        Self: Sized,
+    {
+        self.merge(other);
+        self
+    }
 }
 
 /// Merge strategies for `Option`

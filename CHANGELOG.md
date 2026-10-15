@@ -5,7 +5,8 @@ SPDX-License-Identifier: CC0-1.0
 
 # Unreleased
 
--
+- Switch of unmaintained crate proc-macro-error2 to proc-macro-error3
+- Extend `Merge` with `merged`
 
 # v0.2.0 (2025-04-10)
 
